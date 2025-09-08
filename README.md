@@ -1,2 +1,2 @@
 # landing-project
-Practice project-implementing html and css knowledge.
+Practice project – implementing HTML and CSS knowledge. I will try to recreate an example page using everything I've learned about HTML, CSS, and Flexbox. The main task is to make this website look good on a computer screen. No responsiveness for now.
