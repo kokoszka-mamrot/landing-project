@@ -1,15 +1,37 @@
 body{
     height: 100vh;
     margin: 0;
+    background: #706c6c;
 }
+
+.page{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 36px;
+}
+
 header{
-    
+    position: relative;
+}
+header::before{
+    content:"";
+    position: absolute;
+    background: url(chmurka.png) no-repeat center / contain;
+    width: 600px;
+    height: 375px;
+    opacity: 0.3;
+    left: -40px;
+    bottom: -20px;
+    transform: rotate(-12deg);
+}
+header, footer{
     display: flex;
     background: #1F2937;
     padding: 16px;
     justify-content: center;
     align-items: flex-start;
     gap: 64px;
+    color: #E5E7EB;
 }
 .container-right{
     display: flex;
@@ -23,7 +45,7 @@ header{
     justify-content: space-between;
    
 }
-a, p{
+a, p, .text-1{
     text-decoration: none;
     color: #E5E7EB;
     font-size: 18px;
@@ -49,6 +71,7 @@ h2{
     font-size: 36px;
     font-weight: 900;
     color: #1F2937;
+    margin-top: 8px;
    
 
 }
@@ -56,20 +79,14 @@ img{
     width: 400px;
     height: auto;
 }
-button{
-    background: #3882F6;
-    border-radius: 5px;
-    color: #E5E7EB;
-    font-weight: bold;
-    padding:4px 16px;
-    border: none;
-}
 
 main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 36px;
+    background: #F9FAF8;
 }
 .container-left{
     width: 400px;
@@ -78,7 +95,7 @@ main{
 .card{
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 32px;
     flex-wrap: wrap;
 }
 
@@ -98,21 +115,26 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:  36px;
 }
 .container-quote{
-    width: 600px;
+    width: 800px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+   
 }
 .quote{
     font-size: 36px;
     font-weight: 300;
     color: #1F2937;
+
 }
 .sign{
     text-align: end;
     font-weight: 900;
     font-size: 24px;
+    padding-right: 36px;
 }
 .section2{
     background: #3882F6;
@@ -123,9 +145,39 @@ text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
+
+.cloud{
+    position: absolute;
+    width: var(--cloud-w, 110px);
+    aspect-ratio: 5/3;
+    background: url(chmurka.png) no-repeat center / contain;
+    filter: saturate(0.9);}
+
+    .cloud--tl{top:-22px; left:-42px; transform: rotate(-14deg)}
+    .cloud--tr{top:-32px; right:-42px; transform: rotate(12deg); scale:1.3}
+    .cloud--bl{bottom:-32px; left:-42px; transform: rotate(194deg); scale: 1.3;}
+    .cloud--br{bottom:-32px; right:-42px; transform: rotate(-14deg)}
+
 .wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 200px;
+    background: #F9FAF8;
+}
+
+.btn{
+    background: #3882F6;
+    border-radius: 5px;
+    color: #E5E7EB;
+    font-weight: bold;
+    padding:4px 16px;
+}
+.btn--header{
+ border: none;
+}
+.btn--section2{
+border:2px solid #E5E7EB;
 }
